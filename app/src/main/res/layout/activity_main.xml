@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Enlace Bluetooth" android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tv_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="Desconectado" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="Dispositivo emparejado (para modo cliente)" />
+        <Spinner android:id="@+id/sp_devices" android:layout_width="match_parent" android:layout_height="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:hint="Clave compartida del enlace (mín. 8)"
+            app:endIconMode="password_toggle">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_key" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_listen"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="Esperar conexión (servidor)" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_connect"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Conectar (cliente)" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_disconnect"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Desconectar" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_monitor"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="Pantalla Monitoreo" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_trigger"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pantalla Activador" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_logout"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cerrar sesión" />
+    </LinearLayout>
+</ScrollView>

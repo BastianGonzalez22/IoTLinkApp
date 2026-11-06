@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Monitoreo" android:textSize="24sp" android:textStyle="bold" />
+    <TextView android:id="@+id/tv_conn" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Telemetría recibida" android:textStyle="bold" />
+            <TextView android:id="@+id/tv_temp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Temperatura: --" android:textSize="20sp" />
+            <TextView android:id="@+id/tv_bat" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Nivel: --" android:textSize="20sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Estado del actuador (comandos recibidos)" android:textStyle="bold" />
+            <TextView android:id="@+id/tv_act" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="APAGADO · 0 % · MANUAL" android:textSize="20sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView android:id="@+id/tv_stats" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/sw_telemetry"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="Enviar telemetría de este dispositivo (cada 2 s)" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginTop="8dp">
+        <TextView android:id="@+id/tv_log" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fontFamily="monospace" android:textSize="12sp" />
+    </ScrollView>
+</LinearLayout>

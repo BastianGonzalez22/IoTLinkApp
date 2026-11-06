@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Mínimo privilegio: solo Bluetooth clásico con dispositivos ya emparejados (sin escaneo ni ubicación) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
+
+    <application
+        android:allowBackup="false"
+        android:label="IoT Link"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IoTLink">
+
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".MonitoreoActivity" android:exported="false" />
+        <activity android:name=".ActivadorActivity" android:exported="false" />
+    </application>
+</manifest>
